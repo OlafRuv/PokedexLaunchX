@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="style.css">
+        <title>POKEDEX</title>
+    </head>
+    <body>
+        
+        <header>
+            <div id="menu" class="container c-column">
+                <img class="title-image" src="./assets/pngwing.com.png" alt="PokemonTitleImage">
+                <h1 class="" hidden>POKEDEX</h1>
+                <div class="menu">
+                    <p>
+                        <a href="#">- Interactive Pokedex - </a>
+                        <!-- <br class="responsive-br"> 
+                        <a href="#">- Pokemon List- </a> -->
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <div class="container c-column">                
+                <div class="flex-container">
+                    <div class="container c-row">
+                        <label for="pokeId">Buscar un Pokemon:</label>
+                        <input type="text" class="pixel-font-small" name="pokeIdInput" id="pokeId" placeholder="Bulbasaur | 1 ">
+                        <button id="search-btn" class="search-btn pixel-font" onclick="fetchPokemon()" >
+                            <i class="bi bi-binoculars-fill"></i>
+                            Search
+                        </button>
+                    </div>    
+                    <div class="flex-container">
+                        <div class="container c-column">  
+                            <img id="pokeImg" class="pokeball-image" src="./assets/dayo3ow-7ac86c31-8b2b-4810-89f2-e6134caf1f2d.gif" alt="PokeBall Image">
+                            <p id="pokeName" class="pokeName text-center"></p>
+                            <div id="types-container" class="container c-types">
+                                <!-- here images of types will show --> 
+                            </div>
+                        </div>
+                        <div class="container c-column">
+                            <div class="container c-row">
+                                <label for="hp">HP: </label>
+                                <!-- <br c>lass="responsive-br"> -->
+                                <div class="animated-progress progress-1 pixel-font">
+                                    <span id="hp" dataProgress="0"></span>
+                                </div>
+                            </div>
+    
+                            <div class="container c-row">
+                                <label for="attack">Attack:</label>
+                                <!-- <br class="responsive-br"> -->
+                                <div class="animated-progress progress-2 pixel-font">
+                                    <span id="attack" dataProgress="0"></span>
+                                </div>
+                            </div>
+    
+                            <div class="container c-row">
+                                <label for="defense">Defense:</label>
+                                <!-- <br class="responsive-br"> -->
+                                <div class="animated-progress progress-3 pixel-font">
+                                    <span id="defense" dataProgress="0"></span>
+                                </div>
+                            </div>
+    
+                            <div class="container c-row">
+                                <label for="special-attack">Special Attack:</label>
+                                <!-- <br class="responsive-br"> -->
+                                <div class="animated-progress progress-4 pixel-font">
+                                    <span id="special-attack" dataProgress="0"></span>
+                                </div>
+                            </div>
+    
+                            <div class="container c-row">
+                                <label for="special-defense">Special Defense:</label>
+                                <!-- <br class="responsive-br"> -->
+                                <div class="animated-progress progress-5 pixel-font">
+                                    <span id="special-defense" dataProgress="0"></span>
+                                </div>
+                            </div>
+    
+                            <div class="container c-row">
+                                <label for="speed">Speed:</label>
+                                <!-- <br class="responsive-br"> -->
+                                <div class="animated-progress progress-6 pixel-font">
+                                    <span id="speed" dataProgress="0"></span>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="container c-column">
+                    <div class="movements" id="movements">
+                        <p class="text-center">Main Movements</p>
+                    </div>
+                    <div id="moves-container" class="container c-moves">
+                        <!-- Aqui van los movimientos -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./pokedex.js"></script>
+
+</html>
